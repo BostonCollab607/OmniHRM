@@ -8,12 +8,12 @@ We have 3 different moving parts here:
 #### Create image for mongo database. 
 > [Fetch Mongo image](https://hub.docker.com/_/mongo)  from docker hub. 
 
-> ```sudo docker run -d --name <docker-container-name> -e MONGO_INITDB_ROOT_USERNAME=admin   -e MONGO_INITDB_ROOT_PASSWORD=password -p 27017:27017 -v /home/kaustubh/Desktop/OmniHRM/starter_data:/data/db mongo```
+> ```sudo docker run -d --name <docker-container-name> -e MONGO_INITDB_ROOT_USERNAME=admin   -e MONGO_INITDB_ROOT_PASSWORD=password -p 27017:27017 -v <path-to-repo>/starter_data:/data/db mongo```
 
 #### Create Image for backend application.
 - Using the Dockerfile present in performance-management directory.
 - `cd performance-management`
-- `./mvnw clean package -Dspring.data.mongodb.uri=mongodb://admin:password@localhost:27017/demo1?authSource=admin`
+- `./mvnw clean package -DMONGO_URL=mongodb://admin:password@localhost:27017/demo1?authSource=admin`
 - `sudo docker build -t <backend-image-name> .`  
 - Verify that `<backend-image-name>` is listed when `docker images ls` is executed.
 
