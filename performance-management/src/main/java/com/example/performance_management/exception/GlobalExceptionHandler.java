@@ -20,7 +20,8 @@ public class GlobalExceptionHandler {
                 LocalDateTime.now(),
                 exception.getMessage(),
                 webRequest.getDescription(false));
-        System.out.println(errorDetails);
+        System.err.println("Error occured");
+        System.out.println(errorDetails.getDetails());
         return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
     }
 
