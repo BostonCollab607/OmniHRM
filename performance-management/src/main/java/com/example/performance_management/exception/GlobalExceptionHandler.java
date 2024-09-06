@@ -21,7 +21,7 @@ public class GlobalExceptionHandler {
                 exception.getMessage(),
                 webRequest.getDescription(false));
         System.err.println("Error occured");
-        System.out.println(errorDetails.getDetails());
+        System.out.println(errorDetails.toString());
         return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
     }
 

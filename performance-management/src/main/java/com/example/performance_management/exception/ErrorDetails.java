@@ -15,4 +15,13 @@ public class ErrorDetails {
     private LocalDateTime dateTime;
     private String message;
     private String details;
+
+    @Override
+    public String toString() {
+        return "ErrorDetails{" +
+                "dateTime=" + dateTime +
+                ", message='" + message + '\'' +
+                ", details='" + details + '\'' +
+                '}';
+    }
 }

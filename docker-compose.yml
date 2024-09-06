@@ -11,15 +11,21 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
     volumes:
       - /home/kaustubh/Desktop/OmniHRM/starter_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 2
   hrm-backend-test-1:
-    image: backend:latest
+    image: hrm-be:latest
     container_name: backend
     ports:
       - 8081:8081
-    links:
+    depends_on:
       - hrm-db-test-prod-1
     environment:
       - MONGO_URL=mongodb://admin:password@hrm-db-test-prod-1:27017/demo1?authSource=admin
+
   hrm-frontend-test-1:
     image: hrm-fe:latest
     container_name: frontend
