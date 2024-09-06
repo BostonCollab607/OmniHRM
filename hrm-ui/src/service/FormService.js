@@ -1,12 +1,11 @@
-import axios from "axios";
-import React from "react";
+import api from "./BaseService";
 
-const baseURL = "http://localhost:8081/api/form";
+const baseURL = "/api/form";
 
 export const submitForm = (formData) => {
-    return axios.post(baseURL, formData);
+    return api.post(baseURL, formData);
 }
 
 export const getFormData = () => {
-    return axios.get(baseURL);
+    return api.get(baseURL);
 }
