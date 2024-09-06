@@ -70,7 +70,9 @@ public class SecurityConfiguration {
 
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowCredentials(true); // Allow credentials (e.g., cookies)
+        configuration.addAllowedOrigin("http://143.110.248.76:5173");
         configuration.addAllowedOrigin("http://localhost:5173");
+        configuration.addAllowedOrigin("http://143.110.248.76:5173");
         configuration.addAllowedHeader("*"); // Allow all headers
         configuration.addAllowedMethod("*"); // Allow all HTTP methods
         source.registerCorsConfiguration("/**", configuration); // Apply CORS configuration to all paths

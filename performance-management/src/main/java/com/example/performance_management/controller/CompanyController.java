@@ -14,7 +14,7 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/api/company")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 public class CompanyController {
     private final CompanyService companyService;
     private final CompanyMapper companyMapper;
