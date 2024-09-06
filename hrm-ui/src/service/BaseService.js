@@ -2,8 +2,9 @@ import axios from "axios";
 import { getAccessToken, logout, refreshApiCall, storeToken } from "./auth/AuthService";
 
 const api = axios.create({
-    baseURL: "http://143.110.248.76:5173:8081"
+    baseURL: "http://143.110.248.76:8081"
 });
+// what the actual fuck.
 
 api.interceptors.request.use(function (config) {
     config.headers['Authorization'] = 'Bearer ' + getAccessToken();
