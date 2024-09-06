@@ -12,7 +12,7 @@ services:
     volumes:
       - /home/kaustubh/Desktop/OmniHRM/starter_data/db:/data/db
   hrm-backend-test-1:
-    image: hrm-be:latest
+    image: backend:latest
     container_name: kaustubhbe2
     ports:
       - 8081:8081

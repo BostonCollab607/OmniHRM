@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getAccessToken, refreshApiCall, storeToken } from "./auth/AuthService";
+import { getAccessToken, logout, refreshApiCall, storeToken } from "./auth/AuthService";
 
 const api = axios.create({
     baseURL: "http://localhost:8081"
@@ -33,8 +33,7 @@ api.interceptors.response.use(
                 return api(originalRequest);
             } catch (refreshError) {
                 console.error('Refresh token is invalid or expired:', refreshError);
-                // Handle refresh token expiration (e.g., logout the user)
-                // Optionally, redirect to login page
+                logout();
                 return Promise.reject(refreshError);
             }
         }
