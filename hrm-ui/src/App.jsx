@@ -16,7 +16,9 @@ import SummaryComponent from './components/performance/SummaryComponent'
 import AttendanceComponent from './components/timesheet/AttendanceComponent'
 import TimesheetSummaryComponent from './components/timesheet/TimesheetSummaryComponent'
 import TimesheetComponent from './components/timesheet/TimesheetComponent'
+import LeaveManagementComponent from './components/timesheet/LeaveManagementComponent'
 import EmployeeDetails from './components/personal/EmployeeDetails'
+
 
 import RegisterCompanyComponent from './components/hr/RegisterCompanyComponent'
 import HRSummaryComponent from './components/hr/HRSummaryComponent'
@@ -54,6 +56,7 @@ function App() {
           <Route path='/time/attendance' element={< AttendanceComponent />}></Route>
           <Route path='/time/timesheet' element={< TimesheetComponent />}></Route>
           <Route path='/time/summary' element={< TimesheetSummaryComponent />}></Route>
+          <Route path='/time/leave-management' element={<LeaveManagementComponent />}></Route>
 
           <Route path='/personal/summary' element={< EmployeeDetails />}></Route>
 

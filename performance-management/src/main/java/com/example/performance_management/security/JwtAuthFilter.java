@@ -61,7 +61,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith(bearer)) {
             return bearerToken.substring(bearer.length(), bearerToken.length());
         }
-        return null;
+        return bearerToken;
     }
 
     public Set<String> getPermittedUrls() {

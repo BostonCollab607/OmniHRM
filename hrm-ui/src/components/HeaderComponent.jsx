@@ -33,6 +33,7 @@ const HeaderComponent = () => {
     } else if (section === 'leave-management') {
       return (
         <>
+        <DropdownItem><NavLink to="/time/leave-management" className="nav-link">Leave Management</NavLink></DropdownItem>
         </>
       );
     } else if (section === 'time') {
