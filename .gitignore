@@ -1,3 +1,4 @@
+starter_data/
 Vagrant
 pkg
 deploy
@@ -5,6 +6,4 @@ AttendanceMS/go.sum
 DBMS_TestServer/go.sum
 node_modules
 HandlerMS
-starter_data/db/diagnostic.data/*
-starter_data/db/*.wt
 **.xml
