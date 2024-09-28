@@ -2,7 +2,7 @@ import axios from "axios";
 import { getAccessToken, logout, refreshApiCall, storeToken } from "./auth/AuthService";
 
 const api = axios.create({
-    baseURL: "http://localhost:8081"
+    baseURL: "http://143.110.248.76:8081" //
 });
 // what the actual fuck.
 
