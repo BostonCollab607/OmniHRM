@@ -32,7 +32,7 @@ jobs:
       run: docker build -t kaustubhdeokar/hrm-frontend:latest .
 
     - name: Login to DockerHub
-      run: echo OmniHRM27 | docker login -u kaustubhdeokar --password-stdin
+      run: echo FedExp@08D | docker login -u ${{ secrets.DOCKER_LOGIN }} --password-stdin
 
     - name: Push Backend Docker image to DockerHub
       run: docker push kaustubhdeokar/hrm-backend:latest
