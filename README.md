@@ -4,6 +4,8 @@ Provides an end-to-end Human Resource Management tool, providing various feature
 Developed by kaustubhdeokar, Lkishor123 & pathave
 
 ### [Youtube Video link](https://www.youtube.com/playlist?list=PLKsneWgsZjdH83nLxyCQcYL4fJ2JXraQ1)
+### [Hosting - Digital Ocean]([https://www.youtube.com/playlist?list=PLKsneWgsZjdH83nLxyCQcYL4fJ2JXraQ1](http://143.110.248.76:5173/))
+
 
 ## Summary
 
